@@ -253,11 +253,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     width: 40%;
     height: 20%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .event_details{
     display: inline-block;
-    width: 50%;
 }
 .event_details textarea {
     height: 35px;
@@ -268,3 +268,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     font-size: 15pt
 }
 
+.extra{
+    width: 30%;
+    height: 200px;
+    margin: 50px;
+    display: inline-block;
+}
+
+.submit{
+    margin: 20px
+}
