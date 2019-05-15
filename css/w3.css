@@ -236,7 +236,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     display: inline-block;
 }
 .game_details_container textarea {
-    height: 20px;
+    height: 33px;
 }
 
 .game_details_container h {
@@ -254,3 +254,17 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     height: 20%;
     display: inline-block;
 }
+
+.event_details{
+    display: inline-block;
+    width: 50%;
+}
+.event_details textarea {
+    height: 35px;
+}
+
+.event_details h {
+    text-decoration-line: underline;
+    font-size: 15pt
+}
+
