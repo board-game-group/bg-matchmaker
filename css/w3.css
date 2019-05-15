@@ -248,3 +248,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     width: 50%;
     display: inline-block;
 }
+
+.image_for_game{
+    width: 40%;
+    height: 20%;
+    display: inline-block;
+}
