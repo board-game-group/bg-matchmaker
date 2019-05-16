@@ -294,3 +294,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     margin: 15px;
     height: 80px;
 }
+
+input[type="date"] {
+    color: grey;
+}
+
+input[type="time"] {
+    color: grey;
+}

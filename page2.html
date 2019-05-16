@@ -49,8 +49,8 @@
       <textarea></textarea>
     </div>
     <div>
-      <p>Runtime: </p>
-      <textarea></textarea>
+      <p>Runtime (min): </p>
+      <input type="number" name="runtime" min="1" max="180">
     </div>
     <div>
       <p>Complexity: </p>
@@ -62,7 +62,7 @@
     </div>
     <div>
       <p>Number of players: </p>
-      <textarea></textarea>
+      <input type="number" name="players" min="1" max="20">
     </div>
     <input type="radio" name="playstyle" value="casual"> Casual<br>
     <input type="radio" name="playstyle" value="competitive"> Competitive
@@ -73,9 +73,9 @@
     <div class=event_details>
     <h class=game_detail>Event Info</h>
       <p>Date: </p>
-      <textarea placeholder=" MM/DD/YYYY"></textarea>
+      <input type="date">
       <p>Time: </p>
-      <textarea placeholder=" 00:00 _M"></textarea>
+      <input type="time">
       <p>Location: </p>
       <textarea placeholder=" Street Address"></textarea>
       <textarea placeholder=" City"></textarea>
