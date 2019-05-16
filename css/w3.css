@@ -289,3 +289,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .submit{
     margin: 20px
 }
+
+.btn-w3-padding-16{
+    margin: 15px;
+    height: 80px;
+}
