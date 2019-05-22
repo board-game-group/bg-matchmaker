@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="event_tracker.js"></script> 
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -16,7 +17,7 @@
       <i class="fa fa-bars"></i>
     </a>
     <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right">
       <i class="fa fa-search"></i>
     </a>
   </div>
@@ -37,59 +38,73 @@
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center"><b>Event Details</b></h3>
-  <p class="w3-center"><em>Fill in Page</em></p>
-  <div class=game_details_container>
-    <h>Game Info</h>
-    <div>
-      <div>Title: </div>
-      <textarea></textarea>
-    </div>
-    <div>
-      <div>Genre: </div>
-      <textarea></textarea>
-    </div>
-    <div>
-      <div>Runtime (min): </div>
-      <input type="number" name="runtime" min="1" max="180">
-    </div>
-    <div>
-      <div>Complexity: </div>
-      <textarea></textarea>
-    </div>
-    <div>
-      <div>Rating: </div>
-      <textarea></textarea>
-    </div>
-    <div>
-      <div>Number of players: </div>
-      <input type="number" name="players" min="1" max="20">
-    </div>
+  <div class="form-header">Game Info</div>
+  <form class=game_details_container>
+    <p class="form-entry">
+        <span class="label">Title:</span>
+        <input type="text" name="title">
+    </p>
+    <p class="form-entry">
+        <span class="label">Genre:</span>
+        <input type="text" name="genre">
+    </p>
+    <p class="form-entry">
+        <span class="label">Runtime (min):</span>
+        <input type="number" name="runtime" min="0">
+    </p>
+    <p class="form-entry">
+        <span class="label">Complexity:</span>
+        <input type="number" name="complexity" min="0" max="10">
+    </p>
+    <p class="form-entry">
+        <span class="label">Rating:</span>
+        <input type="number" name="complexity" min="0" max="10">
+    </p>
+    <p class="form-entry">
+        <span class="label">Minimum number of players:</span>
+        <input type="number" name="min_players" min="2">
+    </p>
+    <p class="form-entry">
+        <span class="label">Maximum number of players:</span>
+        <input type="number" name="min_players" min="2">
+    </p>
     <input type="radio" name="playstyle" value="casual"> Casual<br>
     <input type="radio" name="playstyle" value="competitive"> Competitive
-  </div>
-  <img class=image_for_game src="images/p5.jpg"> 
- 
-  <div class="w3-row">
+    <br><br>
+    <div class="w3-row">
     <div class=event_details>
-    <h class=game_detail>Event Info</h>
-      <p>Date: </p>
-      <input type="date">
-      <p>Time: </p>
-      <input type="time">
-      <p>Location: </p>
-      <textarea placeholder=" Street Address"></textarea>
-      <textarea placeholder=" City"></textarea>
-      <textarea placeholder=" State"></textarea>
+    <div class="form-header">Event Info</div>
+      <p class="form-entry">
+        <span class="label">Date:</span>
+        <input type="date">
+      </p>
+      <p class="form-entry">
+        <span class="label">Time:</span>
+        <input type="time">
+      </p>
+      <p class="form-entry">
+        <span class="label">Location:</span>
+        <input type="text" name="street_address" value="Street Address">
+      </p>
+      <p class="form-entry">
+        <span class="label" id="cheating-width">Maximum number of players:</span>
+        <input type="text" name="city" value="City">
+      </p>
+      <p class="form-entry">
+        <span class="label"></span>
+        <input type="text" name="state" value="State">
+      </p>
     </div>
-    <textarea class=extra placeholder=" Additional Comments Here"></textarea>
+    <input type="text" name="comment" value="Additional Comments Here" class="largebox">
     
-    <button class=submit>Submit</button>
+    <input type="submit">
     
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
     </div>
   </div>
-
+  </form>
+  <img class=image_for_game src="images/p5.jpg"> 
 
 </div>
 <script>
