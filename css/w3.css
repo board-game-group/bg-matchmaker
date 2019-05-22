@@ -1,4 +1,4 @@
-﻿/* W3.CSS 4.12 November 2018 by Jan Egil and Borge Refsnes */
+/* W3.CSS 4.12 November 2018 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -251,7 +251,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 .game_details_container h {
-    text-decoration-line: underline;
     font-size: 15pt
 }
 
@@ -286,8 +285,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     display: inline-block;
 }
 
-.submit{
-    margin: 20px
+input[type="submit"]{
+    margin: 20px;
+    position: relative;
+    left: -46px;
 }
 
 .btn-w3-padding-16{
@@ -295,7 +296,35 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     height: 80px;
 }
 
+form {
+    display: table;
+}
+
+p.form-entry {
+    display: table-row;
+}
+
+span.label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+    width: 150px;
+    margin-left: 20px;
+}
+
+input[type="radio"] {
+    margin-left: 0px;
+    margin-right: -100px;
+    position: relative;
+}
+
 input[type="date"] {
+    color: grey;
+}
+
+input[type="text"] {
     color: grey;
 }
 
@@ -305,4 +334,22 @@ input[type="time"] {
 
 textarea {
   resize: none;
+}
+
+.form-header {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+#cheating-width {
+    color: white;
+}
+
+input[type="text"].largebox {
+    display: block;
+    width: 365px;
+    height: 150px;
+    text-align: center;
+    position: relative;
+    right: 24px;
 }
