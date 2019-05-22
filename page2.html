@@ -41,29 +41,33 @@
   <div class=game_details_container>
     <h>Game Info</h>
     <div>
-      <p>Title: </p>
+
+      <div>Title: </div>
       <textarea></textarea>
     </div>
     <div>
-      <p>Genre: </p>
+      <div>Genre: </div>
       <textarea></textarea>
     </div>
     <div>
-      <p>Runtime: </p>
+      <div>Runtime (min): </div>
+      <input type="number" name="runtime" min="1" max="180">
+    </div>
+    <div>
+      <div>Complexity: </div>
       <textarea></textarea>
     </div>
     <div>
-      <p>Complexity: </p>
+      <div>Rating: </div>
       <textarea></textarea>
     </div>
     <div>
-      <p>Rating: </p>
-      <textarea></textarea>
+      <div>Number of players: </div>
+      <input type="number" name="players" min="1" max="20">
     </div>
-    <div>
-      <p>Number of players: </p>
-      <textarea></textarea>
-    </div>
+    <input type="radio" name="playstyle" value="casual"> Casual<br>
+    <input type="radio" name="playstyle" value="competitive"> Competitive
+
   </div>
   <img class=image_for_game src="images/p5.jpg"> 
  
@@ -71,9 +75,12 @@
     <div class=event_details>
     <h class=game_detail>Event Info</h>
       <p>Date: </p>
+
+      
       <textarea placeholder=" MM/DD/YYYY"></textarea>
       <p>Time: </p>
       <textarea placeholder=" 00:00 _M"></textarea>
+
       <p>Location: </p>
       <textarea placeholder=" Street Address"></textarea>
       <textarea placeholder=" City"></textarea>
