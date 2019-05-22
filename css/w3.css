@@ -1,4 +1,4 @@
-﻿/* W3.CSS 4.12 November 2018 by Jan Egil and Borge Refsnes */
+/* W3.CSS 4.12 November 2018 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -298,14 +298,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     height: 80px;
 }
 
-input[type="date"] {
-    color: grey;
-}
-
-input[type="time"] {
-    color: grey;
-}
-
 #main-search {
   resize: none;
   height: 30px;
@@ -381,24 +373,66 @@ input[type="time"] {
     margin-bottom: -70px;
 }
 
-/*
-.indiv-result p{
+input[type="submit"]{
+    margin: 20px;
     position: relative;
-    margin: 4px;
-    padding-top:5px; 
-    width: 150px;
-    display: block;
-}
-.indiv-result header{
-    position: relative;
-    margin: 4px;
-    width: 150px;
-    display: block;
+    left: -46px;
 }
 
+form {
+    display: table;
+}
 
-.wrapper{
-    display: inline-block;
-    width: 900px;
-    height: 700px;
-} */
+p.form-entry {
+    display: table-row;
+}
+
+span.label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+    width: 150px;
+    margin-left: 20px;
+}
+
+input[type="radio"] {
+    margin-left: 0px;
+    margin-right: -100px;
+    position: relative;
+}
+
+input[type="date"] {
+    color: grey;
+}
+
+input[type="text"] {
+    color: grey;
+}
+
+input[type="time"] {
+    color: grey;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-header {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+#cheating-width {
+    color: white;
+}
+
+input[type="text"].largebox {
+    display: block;
+    width: 365px;
+    height: 150px;
+    text-align: center;
+    position: relative;
+    right: 24px;
+}
