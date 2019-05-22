@@ -7,110 +7,137 @@
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="event-builder.js"></script>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
   </div>
 
-  <!-- Navbar on small screens -->
-</div>
-
-<!-- First Parallax Image with Logo Text -->
+  <!-- First Parallax Image with Logo Text -->
 
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">Search Results</h3>
-  
-  <div class="w3-row">
-    <div class=filter> 
-      <header>Filters</header>
-      <div class="selects">
-        <label>Genre</label>
-        <select>
-          <option>Select</option>
-          <option>Abstract Strategy</option>
-          <option>Modern Strategy</option>
-          <option>Dice</option>
-          <option>Cards</option>
-          <option>Cooperative</option>
-          <option>Puzzle</option>
-          <option>Party</option>
-          <option>RPG</option>
-          <option>Secret Identity</option>
-        </select>
-        <label># of Players</label>
-        <select>
-          <option>Select</option>
-          <option>1-4</option>
-          <option>5-10</option>
-          <option>10+</option>
-        </select>
-        <label>Competiveness</label>
-        <select>
-          <option>Select</option>
-          <option>Agressive</option>
-          <option>Casual</option>
-          <option>Learning</option>
-        </select>
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Search Results</h3>
+
+    <div class="w3-row">
+      <div class=filter>
+        <header>Filters</header>
+        <div class="selects">
+          <label>Genre</label>
+          <select>
+            <option>Select</option>
+            <option>Abstract Strategy</option>
+            <option>Modern Strategy</option>
+            <option>Dice</option>
+            <option>Cards</option>
+            <option>Cooperative</option>
+            <option>Puzzle</option>
+            <option>Party</option>
+            <option>RPG</option>
+            <option>Secret Identity</option>
+          </select>
+          <label># of Players</label>
+          <select>
+            <option>Select</option>
+            <option>1-4</option>
+            <option>5-10</option>
+            <option>10+</option>
+          </select>
+          <label>Competiveness</label>
+          <select>
+            <option>Select</option>
+            <option>Agressive</option>
+            <option>Casual</option>
+            <option>Learning</option>
+          </select>
+        </div>
       </div>
-    </div>
-  <div class=event-results>
-    <div class=indiv-result>
-      <header>Event: </header>
-      <p>Game: </p>
-      <p>Location:</p>
-      <p>Time: </p>
+      <div id=event-list>
+          
+      </div>
+
+      <script>
+        buildeventlist();
+      </script>
+      <!-- <div class=wrapper>
+        <div class=event-results>
+          <div class=indiv-result>
+            <header>Event: </header>
+            <p>Game: </p>
+            <p>Location:</p>
+            <p>Time: </p>
+          </div>
+        </div>
+        <div class=event-results>
+          <div class=indiv-result>
+            <header>Event: </header>
+            <p>Game: </p>
+            <p>Location:</p>
+            <p>Time: </p>
+          </div>
+        </div>
+        <div class=event-results>
+          <div class=indiv-result>
+            <header>Event: </header>
+            <p>Game: </p>
+            <p>Location:</p>
+            <p>Time: </p> -->
+          <!-- </div>
+        </div>
+      </div> -->
     </div>
   </div>
-
   </div>
-</div>
 
 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
+      } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
     }
-}
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else {
+      } else {
         x.className = x.className.replace(" w3-show", "");
+      }
     }
-}
-</script>
+  </script>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </html>

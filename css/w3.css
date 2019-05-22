@@ -337,9 +337,9 @@ textarea {
     width: 150px;
 } 
 
-.event-results{
+.event-wrapper{
     width: 800px;
-    height: 150px;
+    height: 175px;
     border: #000 2px solid;
     display: inline-block;
     position: relative;
@@ -347,6 +347,10 @@ textarea {
     margin: 20px;
 }
 
+#eventlist{
+    display: inline-block;
+}
+/*
 .indiv-result p{
     position: relative;
     margin: 4px;
@@ -360,3 +364,13 @@ textarea {
     width: 150px;
     display: block;
 }
+
+.w3-row{
+    width: 1200px
+}
+
+.wrapper{
+    display: inline-block;
+    width: 900px;
+    height: 700px;
+} */
