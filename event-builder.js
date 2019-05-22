@@ -96,11 +96,11 @@ function buildeventlist() {
     var eventDiv = document.createElement('div');
     let child = '';
     eventDiv.classList.add('event-wrapper');
-    child += `<p class="event-title">${event.title}</p>`;
-    child += `<p class="event-address">${event.street_address}</p>`;
-    child += `<p class="event-city">${event.city}</p>`;
-    child += `<p class="event-date">${event.date}</p>`;
-    child += `<p class="event-time">${event.time}</p>`;
+    child += `<p class="event-title">Title: ${event.title}</p>`;
+    child += `<p class="event-address">Address: ${event.street_address}</p>`;
+    child += `<p class="event-city"> City: ${event.city}</p>`;
+    child += `<p class="event-date">Date: ${event.date}</p>`;
+    child += `<p class="event-time">Time: ${event.time}</p>`;
     eventDiv.innerHTML = child;
     if (eventList != null) {
       eventList.appendChild(eventDiv);

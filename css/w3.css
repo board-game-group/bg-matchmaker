@@ -312,6 +312,9 @@ textarea {
     height: 550px;
     width: 175px;
     display: inline-block;
+    margin: 1px;
+    position: relative;
+    bottom: 100 px;
     
 }
 .filter header{
@@ -319,7 +322,7 @@ textarea {
     font: bold;
     font-size: 20pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-}
+} 
 
 .selects label{
     font-size: 13pt;
@@ -342,14 +345,18 @@ textarea {
     height: 175px;
     border: #000 2px solid;
     display: inline-block;
-    position: relative;
-    top: -150px;
     margin: 20px;
 }
 
-#eventlist{
+#event-list{
     display: inline-block;
+    width: 900px;
 }
+
+.w3-row{
+    width: 1200px
+}
+
 /*
 .indiv-result p{
     position: relative;
@@ -365,9 +372,6 @@ textarea {
     display: block;
 }
 
-.w3-row{
-    width: 1200px
-}
 
 .wrapper{
     display: inline-block;
