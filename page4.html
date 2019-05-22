@@ -29,19 +29,18 @@
     <!-- Navbar on small screens -->
   </div>
 
-  <!-- First Parallax Image with Logo Text -->
 
 
   <!-- Container (About Section) -->
   <div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">Search Results</h3>
+    <h3 class="w3-center">Filtered Results</h3>
 
-    <div class="w3-row">
+    <div class="wrapper1">
       <div class=filter>
         <header>Filters</header>
         <div class="selects">
           <label>Genre</label>
-          <select>
+          <select onchange="buildeventlist()" id="category-selector">
             <option>Select</option>
             <option>Abstract Strategy</option>
             <option>Modern Strategy</option>
@@ -54,24 +53,21 @@
             <option>Secret Identity</option>
           </select>
           <label># of Players</label>
-          <select>
+          <select onchange="buildeventlist()" id="player-selector">
             <option>Select</option>
             <option>1-4</option>
             <option>5-10</option>
             <option>10+</option>
           </select>
           <label>Competiveness</label>
-          <select>
+          <select onchange="buildeventlist()" id="tryhard-selector">
             <option>Select</option>
-            <option>Agressive</option>
             <option>Casual</option>
-            <option>Learning</option>
+            <option>Competitive</option>
           </select>
         </div>
       </div>
-      <div id=event-list>
-          
-      </div>
+      <ul id=event-list></ul>
 
       <script>
         buildeventlist();
@@ -106,7 +102,6 @@
   </div>
   </div>
 
-
   <script>
     // Modal Image Gallery
     function onClick(element) {
@@ -116,6 +111,7 @@
       captionText.innerHTML = element.alt;
     }
 
+    
     // Change style of navbar on scroll
     window.onscroll = function () { myFunction() };
     function myFunction() {

@@ -233,10 +233,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
 .finder {
-    margin-left: 275px;
+    margin-left: 250px;
     display: inline;
     padding: 100px;
     border: 2px solid black;
+    position: relative;
+    top: -100px;
+    left: -30px;
 }
 .container {
     margin-top: 400px;
@@ -303,19 +306,21 @@ input[type="time"] {
     color: grey;
 }
 
-textarea {
+#main-search {
   resize: none;
+  height: 30px;
+  position: relative;
+  top: 10px;
 }
 
 .filter{
     border: #000 2px solid;
-    height: 550px;
+    height: 300px;
     width: 175px;
     display: inline-block;
     margin: 1px;
-    position: relative;
-    bottom: 100 px;
-    
+    position: fixed;
+    top: 121px;
 }
 .filter header{
     text-align: center;
@@ -346,15 +351,34 @@ textarea {
     border: #000 2px solid;
     display: inline-block;
     margin: 20px;
+
 }
 
 #event-list{
     display: inline-block;
     width: 900px;
+    padding-left: 175px;
 }
 
-.w3-row{
+.wrapper1{
     width: 1200px
+}
+
+.game-div{
+    width: 40%;
+    display: inline-block;
+    position: relative;
+    left: 20px;
+}
+
+.event-wrapper form{
+    position: relative;
+    display: inline-block;
+    top:-75px;
+}
+
+#about {
+    margin-bottom: -70px;
 }
 
 /*
