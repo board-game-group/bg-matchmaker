@@ -334,4 +334,29 @@ textarea {
 .selects select{
     position: relative;
     left: 4px;
+    width: 150px;
 } 
+
+.event-results{
+    width: 800px;
+    height: 150px;
+    border: #000 2px solid;
+    display: inline-block;
+    position: relative;
+    top: -150px;
+    margin: 20px;
+}
+
+.indiv-result p{
+    position: relative;
+    margin: 4px;
+    padding-top:5px; 
+    width: 150px;
+    display: block;
+}
+.indiv-result header{
+    position: relative;
+    margin: 4px;
+    width: 150px;
+    display: block;
+}
