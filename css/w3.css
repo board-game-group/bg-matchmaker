@@ -1,4 +1,4 @@
-/* W3.CSS 4.12 November 2018 by Jan Egil and Borge Refsnes */
+﻿/* W3.CSS 4.12 November 2018 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -399,10 +399,15 @@ input {
 
 input[type="radio"] {
     margin-left: 0px;
-    margin-right: -100px;
+    margin-right: -200px;
     position: relative;
-    right: 40px;
+    right: 0px;
+    display: block;
+}
 
+.radio-label {
+    position: relative;
+    left: -150px;
 }
 
 input[type="date"] {
