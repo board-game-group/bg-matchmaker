@@ -9,20 +9,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
 
 <script src="event-builder.js"></script>
-<body>
+<body class = "w3-theme-l4">
 
   <!-- Navbar (sit on top) -->
-  <div class="w3-top">
+  <div class="w3-top w3-theme">
     <div class="w3-bar" id="myNavbar">
       <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
         onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
       </a>
       <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-        <i class="fa fa-search"></i>
+      <a class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in">
+        SIGN IN
       </a>
     </div>
 
@@ -36,11 +37,11 @@
     <h3 class="w3-center">Filtered Results</h3>
 
     <div class="wrapper1">
-      <div class=filter>
+      <div class="filter w3-theme-l3" >
         <header>Filters</header>
         <div class="selects">
           <label>Genre</label>
-          <select onchange="buildeventlist()" id="category-selector">
+          <select onchange="buildeventlist()" id="category-selector" class="w3-theme-l4">
             <option>Select</option>
             <option>Abstract Strategy</option>
             <option>Modern Strategy</option>
@@ -53,14 +54,14 @@
             <option>Secret Identity</option>
           </select>
           <label># of Players</label>
-          <select onchange="buildeventlist()" id="player-selector">
+          <select onchange="buildeventlist()" id="player-selector" class="w3-theme-l4">
             <option>Select</option>
             <option>1-4</option>
             <option>5-10</option>
             <option>10+</option>
           </select>
           <label>Competiveness</label>
-          <select onchange="buildeventlist()" id="tryhard-selector">
+          <select onchange="buildeventlist()" id="tryhard-selector" class="w3-theme-l4">
             <option>Select</option>
             <option>Casual</option>
             <option>Competitive</option>
@@ -111,17 +112,7 @@
       captionText.innerHTML = element.alt;
     }
 
-    
-    // Change style of navbar on scroll
-    window.onscroll = function () { myFunction() };
-    function myFunction() {
-      var navbar = document.getElementById("myNavbar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-      } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-      }
-    }
+
 
     // Used to toggle the menu on small screens when clicking on the menu button
     function toggleFunction() {
