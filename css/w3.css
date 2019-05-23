@@ -443,3 +443,18 @@ input[type="text"].largebox {
     position: relative;
     right: 24px;
 }
+
+input[type="submit"] {
+    display: block;
+    position: relative;
+    left:190px;
+}
+
+.site-name {
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    position: relative;
+    left: 480px;
+    top: 50px;
+}
