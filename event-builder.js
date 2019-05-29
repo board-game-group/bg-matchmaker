@@ -166,8 +166,8 @@ function buildeventlist() {
 
     <div class="game-div">
     <p class="event-title">Genre: ${event.genre}</p>
-    <p class="event-title">${event.date}, ${event.time}</p>
-    <p class="event-address">${event.street_address}, ${event.city}, ${event.state}</p>
+    <p class="event-title">Event Time: ${event.date}, ${event.time}</p>
+    <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state}</p>
     </div>
 
     <form action="./index.html">
