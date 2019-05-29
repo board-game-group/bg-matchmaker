@@ -41,7 +41,7 @@ var events = [
     max_players: "10",
     playtime: "30",
     date: "06/15/19",
-    time: "10:00 PM",
+    time: "8:00 PM",
     street_address: "2107 Lake St",
     city: "Evanston",
     state: "IL",
@@ -184,4 +184,47 @@ function buildeventlist() {
       eventList.appendChild(eventDiv);
     }
   }
+}
+
+function handleSignIn() {
+    let button = document.getElementById("sign-in");
+    if(button.innerHTML != "SIGN IN") {
+        let popup = document.getElementById("popup-out");
+        popup.style.display = "block";
+        return 0;
+    }
+    let popup = document.getElementById("popup-in");
+    popup.style.display = "block";
+    return 0;
+}
+
+function handleStoreName() {
+    let username = document.getElementById("username");
+    let button = document.getElementById("sign-in");
+    let popup = document.getElementById("popup-in");
+    
+    popup.style.display = "none";
+    
+    sessionStorage.setItem("username", username.value);
+    button.innerHTML = sessionStorage.getItem("username");
+    
+    return 0;
+}
+
+function handleSignOut() {
+    sessionStorage.removeItem("username");
+    document.getElementById("sign-in").innerHTML = "SIGN IN";
+    document.getElementById("popup-out").style.display = "none";
+    return 0;
+}
+
+function startUp() {
+    if(sessionStorage.getItem("username") === null) {
+        let button = document.getElementById("sign-in");
+        button.value = "SIGN IN";
+        return 0;
+    }
+    let button = document.getElementById("sign-in");
+    button.innerHTML = sessionStorage.getItem("username");
+    return 0;
 }
