@@ -159,19 +159,15 @@ function buildeventlist() {
     child += `
 
     <div class="game-div">
-    <p class="event-title">${event.title}</p>
-    <p class="event-address">${event.genre}</p>
-    <p class="event-city">${event.max_players} players</p>
-    <p class="event-date">${event.playstyle}</p>
-    <p class="event-time">${event.playtime} min</p>
+    <p class="event-title">${event.title} (${event.playstyle})</p>
+    <p class="event-title">Max Players: ${event.max_players}</p>
+    <p class="event-time">Playtime: ${event.playtime} min</p>
     </div>
 
     <div class="game-div">
-    <p class="event-title">${event.date}</p>
-    <p class="event-time">${event.time}</p>
-    <p class="event-address">${event.street_address}</p>
-    <p class="event-city"> ${event.city}</p>
-    <p class="event-date">${event.state}</p>
+    <p class="event-title">Genre: ${event.genre}</p>
+    <p class="event-title">${event.date}, ${event.time}</p>
+    <p class="event-address">${event.street_address}, ${event.city}, ${event.state}</p>
     </div>
 
     <form action="./index.html">
@@ -202,12 +198,12 @@ function handleStoreName() {
     let username = document.getElementById("username");
     let button = document.getElementById("sign-in");
     let popup = document.getElementById("popup-in");
-    
+
     popup.style.display = "none";
-    
+
     sessionStorage.setItem("username", username.value);
     button.innerHTML = sessionStorage.getItem("username");
-    
+
     return 0;
 }
 
