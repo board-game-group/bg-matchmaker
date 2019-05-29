@@ -185,3 +185,47 @@ function buildeventlist() {
     }
   }
 }
+
+function handleSignIn() {
+    let button = document.getElementById("sign-in");
+    if(button.innerHTML != "SIGN IN") {
+        let popup = document.getElementById("popup-out");
+        popup.style.display = "block";
+        return 0;
+    }
+    let popup = document.getElementById("popup-in");
+    button.innerHTML = "Lasagna"
+    popup.style.display = "block";
+    return 0;
+}
+
+function handleStoreName() {
+    let username = document.getElementById("username");
+    let button = document.getElementById("sign-in");
+    let popup = document.getElementById("popup-in");
+    
+    popup.style.display = "none";
+    
+    sessionStorage.setItem("username", username.value);
+    button.innerHTML = sessionStorage.getItem("username");
+    
+    return 0;
+}
+
+function handleSignOut() {
+    sessionStorage.removeItem("username");
+    document.getElementById("sign-in").innerHTML = "SIGN IN";
+    document.getElementById("popup-out").style.display = "none";
+    return 0;
+}
+
+function startUp() {
+    if(sessionStorage.getItem("username") === null) {
+        let button = document.getElementById("sign-in");
+        button.value = "SIGN IN";
+        return 0;
+    }
+    let button = document.getElementById("sign-in");
+    button.innerHTML = sessionStorage.getItem("username");
+    return 0;
+}
