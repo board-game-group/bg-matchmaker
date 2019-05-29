@@ -41,7 +41,7 @@ var events = [
     max_players: "10",
     playtime: "30",
     date: "06/15/19",
-    time: "10:00 PM",
+    time: "8:00 PM",
     street_address: "2107 Lake St",
     city: "Evanston",
     state: "IL",
