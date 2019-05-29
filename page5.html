@@ -25,10 +25,19 @@
       <a class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in">
         SIGN IN
       </a>
+      <button class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in" onclick="handleSignIn()">SIGN IN</button>
     </div>
   </div>
 
+  <div id="popup-in">
+      <input type="text" placeholder = "username" id="username">
+      <br>
+      <input type="text" placeholder = "password" id="password">
+      <br>
+      <button type="submit" id="final-login" onclick="handleStoreName()">SUBMIT</button>
+  </div>
 
+  <button type="submit" id="popup-out" onclick="handleSignOut()">SIGN OUT</button>
 
   <!-- Container (About Section) -->
   <div class="w3-content w3-container w3-padding-64" id="about">
@@ -37,6 +46,10 @@
   <div class="w3-center">
     <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=aWZkc2NtYXZ2amtubmdmanRsaHVibjFobm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bmZsXzhfJTQ0ZXRyb2l0KyU0Y2lvbnMjc3BvcnRzQGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F4511E&amp;color=%23009688&amp;color=%23009688&amp;mode=WEEK&dates=20190609/20190615" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
+
+  <script>
+  startUp();
+  </script>
 
   <script>
     // Modal Image Gallery
