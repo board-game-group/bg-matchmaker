@@ -21,7 +21,7 @@
       <i class="fa fa-bars"></i>
     </a>
     <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <button class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in" onclick="handleSignIn()">SIGN IN</button>
+    <button type="button" class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in" onclick="handleSignIn()">SIGN IN</button>
   </div>
 </div>
 
@@ -40,6 +40,9 @@
   <!-- Container (About Section) -->
   <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">Filtered Results(<a href="page5.html"><i class="fa fa-calendar" style="color:black"></i></a>)</h3>
+
+    <input type="text" id="main-search" placeholder="search here">
+    <button type="button" onclick = "buildeventlist()" id="start-search">Search</button>
 
     <div class="wrapper1">
       <div class="filter w3-theme-l3" >
