@@ -243,8 +243,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 .container {
     position: relative;
-    top: 300px;
-    margin-bottom: 400px;
+    top: 315px;
 }
 
 .game_details_container p{
@@ -477,7 +476,7 @@ input[type="submit"] {
     font-size: 30px;
     position: relative;
     left: 37%;
-    top: 50px;
+    top: 75px;
     width: 30%;
 }
 
@@ -517,4 +516,9 @@ input[type="submit"] {
     margin-bottom: 10px;
     left: 50px;
     z-index: -1;
+}
+
+#join {
+  position: relative;
+  left: 50px;
 }

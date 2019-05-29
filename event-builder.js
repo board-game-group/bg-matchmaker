@@ -160,19 +160,16 @@ function buildeventlist() {
 
     <div class="game-div">
     <p class="event-title">${event.title} (${event.playstyle})</p>
-    <p class="event-title">Max Players: ${event.max_players}</p>
-    <p class="event-time">Playtime: ${event.playtime} min</p>
+    <p class="event-title">Genre: ${event.genre}</p>
+    <p class="event-title">Maximum Players: ${event.max_players}</p>
     </div>
 
     <div class="game-div">
-    <p class="event-title">Genre: ${event.genre}</p>
-    <p class="event-title">Event Time: ${event.date}, ${event.time}</p>
-    <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state}</p>
+    <p class="event-title">Event Time: ${event.date}, ${event.time} </p>
+    <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state} <button class="w3-right" id="join">Join</button></p>
+    <p class="event-time">Playtime: ${event.playtime} minutes</p>
     </div>
 
-    <form action="./index.html">
-    <button>Join</button>
-    </form>
     `;
 
     eventDiv.innerHTML = child;
