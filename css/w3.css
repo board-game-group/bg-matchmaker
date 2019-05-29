@@ -338,12 +338,12 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 .event-wrapper{
-    width: 800px;
-    height: 175px;
+    width: 750px;
+    height: 155px;
     border: #000 2px solid;
     display: inline-block;
     margin: 20px;
-
+    margin-bottom: 15px;
 }
 
 #event-list{
@@ -360,13 +360,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     width: 40%;
     display: inline-block;
     position: relative;
-    left: 20px;
+    left: 30px;
+    margin-top: 5px
 }
 
 .event-wrapper form{
     position: relative;
     display: inline-block;
-    top:-75px;
 }
 
 #about {
@@ -457,4 +457,36 @@ input[type="submit"] {
     position: relative;
     left: 480px;
     top: 50px;
+}
+
+.event-city{
+    display: inline-block;
+    margin-top:0px; 
+}
+.event-state{
+    display: inline-block;
+    width: 70%;
+    margin-top:0px;
+}
+.event-address{
+    margin-bottom:1px; 
+}
+.game-div button{
+    width: 60px;
+    height: 30px;
+}
+.event-title{
+    font-weight: bold;
+}
+.game-div p{
+    margin: 2px;
+}
+
+/* trying something here */  
+.search-bar input{
+    width: 40%;
+    height: 20px;
+    position: relative;
+    top:50px;
+    left: 30%;
 }

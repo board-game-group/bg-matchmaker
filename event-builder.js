@@ -10,7 +10,7 @@ var events = [
     min_players: "3",
     max_players: "4",
     playtime: "90",
-    date: "7/12/19",
+    date: "6/12/19",
     time: "5:00 PM",
     street_address: "560 Foxrun Ct",
     city: "Evanston",
@@ -25,7 +25,7 @@ var events = [
     min_players: "2",
     max_players: "4",
     playtime: "45",
-    date: "05/25/19",
+    date: "06/25/19",
     time: "7:30 PM",
     street_address: "500 Pulaski Rd",
     city: "Chicago",
@@ -40,7 +40,7 @@ var events = [
     min_players: "2",
     max_players: "10",
     playtime: "30",
-    date: "06/1/19",
+    date: "07/1/19",
     time: "10:00 PM",
     street_address: "2107 Lake St",
     city: "Evanston",
@@ -70,7 +70,7 @@ var events = [
     min_players: "2",
     max_players: "4",
     playtime: "120",
-    date: "06/20/19",
+    date: "08/28/19",
     time: "11:00 AM",
     street_address: "560 Lincoln St",
     city: "Evanston",
@@ -85,7 +85,7 @@ var events = [
     min_players: "3",
     max_players: "7",
     playtime: "20",
-    date: "6/20/19",
+    date: "9/20/19",
     time: "2:20 PM",
     street_address: "8720 Long St",
     city: "Chicago",
@@ -160,23 +160,24 @@ function buildeventlist() {
 
     <div class="game-div">
     <p class="event-title">${event.title}</p>
-    <p class="event-address">${event.genre}</p>
-    <p class="event-city">${event.max_players} players</p>
-    <p class="event-date">${event.playstyle}</p>
+    <p class="event-genre">${event.genre}</p>
+    <p class="event-players">${event.max_players} players</p>
+    <p class="event-playstyle">${event.playstyle}</p>
     <p class="event-time">${event.playtime} min</p>
     </div>
 
     <div class="game-div">
-    <p class="event-title">${event.date}</p>
+    <p class="event-date">${event.date}</p>
     <p class="event-time">${event.time}</p>
     <p class="event-address">${event.street_address}</p>
-    <p class="event-city"> ${event.city}</p>
-    <p class="event-date">${event.state}</p>
-    </div>
-
+    <p class="event-city">${event.city}, </p>
+    <p class="event-state">${event.state}</p>
     <form action="./index.html">
     <button>Join</button>
     </form>
+    </div>
+
+    
     `;
 
     eventDiv.innerHTML = child;
@@ -184,4 +185,31 @@ function buildeventlist() {
       eventList.appendChild(eventDiv);
     }
   }
+  //trying something here
+output = "";
+$.each(events, function(key, val){
+	output += "<div class='game-div'>";
+  output += "</div>";
+});
+
+$('#content').html(output);
+
+/* SEEKER FUNCTION */
+ if (!RegExp.escape) {
+   RegExp.escape = function (s) {
+     return s.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")
+   };
+ }
+ 
+ jQuery(function(){
+  var $rows = $('.values');
+  $('#seeker').keyup(function () {
+    var regex =  new RegExp(RegExp.escape($.trim(this.value).replace(/\s+/g, ' ')), 'i')
+    $rows.hide().filter(function () {
+      var text = $(this).children(".value-name").text().replace(/\s+/g, ' ');
+      return regex.test(text)
+    }).show();
+  });
+});
 }
+
