@@ -14,21 +14,26 @@
 <script src="event-builder.js"></script>
 <body class = "w3-theme-l4">
 
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top w3-theme">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
-        onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-      <a class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in">
-        SIGN IN
-      </a>
-    </div>
-
-    <!-- Navbar on small screens -->
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-theme">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <button class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in" onclick="handleSignIn()">SIGN IN</button>
   </div>
+</div>
+
+<div id="popup-in">
+    <input type="text" placeholder = "username" id="username">
+    <br>
+    <input type="text" placeholder = "password" id="password">
+    <br>
+    <button type="submit" id="final-login" onclick="handleStoreName()">SUBMIT</button>
+</div>
+
+<button type="submit" id="popup-out" onclick="handleSignOut()">SIGN OUT</button>
 
 
 
@@ -124,6 +129,10 @@
       }
     }
   </script>
+  
+<script>
+startUp();
+</script>
 
 </body>
 

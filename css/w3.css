@@ -233,7 +233,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
 .finder {
-    margin-left: 250px;
+    margin-left: 20%;
     display: inline;
     padding: 100px;
     border: 2px solid black;
@@ -242,7 +242,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     left: -30px;
 }
 .container {
-    margin-top: 400px;
+    position: relative;
+    top: 400px;
     margin-bottom: 400px;
 }
 
@@ -369,8 +370,14 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     top:-75px;
 }
 
-#about {
-    margin-bottom: -70px;
+#aboutEvent {
+    position: relative;
+    left: 0%;
+    background-color: white;
+    width: 55%;
+    border: 2px solid black;
+    margin-top: 50px;
+    margin-bottom: 5px;
 }
 
 input[type="submit"]{
@@ -381,6 +388,8 @@ input[type="submit"]{
 
 form {
     display: table;
+    position: relative;
+    left: 20%;
 }
 
 p.form-entry {
@@ -395,6 +404,7 @@ input {
     display: table-cell;
     width: 150px;
     margin-left: 20px;
+    border: 1px solid gainsboro;
 }
 
 input[type="radio"] {
@@ -424,11 +434,22 @@ input[type="time"] {
 
 textarea {
   resize: none;
+  position: relative;
+  left: 211px;
+  width: 150px;
+  border: 1px solid gainsboro;
+  color: grey;
 }
 
 .form-header {
   font-weight: bolder;
   font-size: 18px;
+}
+
+.form-header.large {
+  font-size: 24px;
+  position: relative;
+  left: 20%;
 }
 
 #cheating-width {
@@ -455,6 +476,45 @@ input[type="submit"] {
     font-weight: bolder;
     font-size: 30px;
     position: relative;
-    left: 480px;
+    left: 37%;
     top: 50px;
+    width: 30%;
+}
+
+#popup-in {
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    position: fixed;
+    top: 10%;
+    left: 80%;
+}
+
+#popup-out {
+    display: none;
+    position: fixed;
+    top: 7%;
+    left: 93%;
+}
+
+#username {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: -7px;
+    z-index: -1;
+}
+
+#password {
+    position: relative;
+    margin-bottom: 10px;
+    left: -7px;
+    z-index: -1;
+}
+
+#final-login {
+    position: relative;
+    margin-bottom: 10px;
+    left: 50px;
+    z-index: -1;
 }
