@@ -268,6 +268,7 @@ function buildeventlist() {
     <p class="event-time">Playtime: ${event.playtime} minutes</p>
     </div>
 
+    <button class="joiner w3-button">Join</button>
     `;
 
     eventDiv.innerHTML = child;

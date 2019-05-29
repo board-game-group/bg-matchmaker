@@ -349,7 +349,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 #event-list{
     display: inline-block;
     width: 900px;
-    padding-left: 29%;
+    padding-left: 25%;
 }
 
 .wrapper1{
@@ -361,6 +361,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     display: inline-block;
     position: relative;
     left: 20px;
+    top: -20px;
 }
 
 .event-wrapper form{
@@ -410,7 +411,6 @@ input[type="radio"] {
     margin-left: 0px;
     margin-right: -200px;
     position: relative;
-    right: 50px;
     display: block;
 }
 
@@ -543,4 +543,15 @@ input[type="submit"] {
     position: relative;
     left: 40%;
     top: 10px;
+}
+
+.joiner {
+    position: relative;
+    background-color: white;
+    top: -64px;
+    left: 45px;
+    width: 115px;
+    height: 103px;
+    border: 1px solid black;
+    border-left: 2px solid black;
 }
