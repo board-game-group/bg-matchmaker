@@ -7,18 +7,19 @@
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="event_tracker.js"></script> 
-<body>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+<script src="event_tracker.js"></script>
+<body class = "w3-theme-l4">
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top w3-theme">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
     <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right">
-      <i class="fa fa-search"></i>
+    <a class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in">
+      SIGN IN
     </a>
   </div>
 
@@ -53,13 +54,13 @@
         <input type="number" name="runtime" min="0">
     </p>
     <p class="form-entry">
-        <span class="label">Complexity:</span>
-        <input type="number" name="complexity" min="0" max="10">
-    </p>
+        <span class="label">Complexity (1-10):</span>
+        <input type="number" name="complexity" min="1" max="10">
+    </p><!--
     <p class="form-entry">
-        <span class="label">Rating:</span>
-        <input type="number" name="rating" min="0" max="10">
-    </p>
+        <span class="label">Rating (1-10):</span>
+        <input type="number" name="rating" min="1" max="10">
+    </p>-->
     <p class="form-entry">
         <span class="label">Minimum number of players:</span>
         <input type="number" name="min_players" min="2">
@@ -68,9 +69,15 @@
         <span class="label">Maximum number of players:</span>
         <input type="number" name="min_players" min="2">
     </p>
-    <input type="radio" name="playstyle" value="casual"> Casual<br>
-    <input type="radio" name="playstyle" value="competitive"> Competitive
-    <br><br>
+    <p class="form-entry">
+        <input type="radio" name="playstyle" value="casual">
+        <span class="label radio-label">Casual</span>
+    </p>
+    <p class="form-entry">
+        <input type="radio" name="playstyle" value="competitive">
+        <span class="label radio-label">Competitive</span>
+    </p>
+
     <div class="w3-row">
     <div class=event_details>
     <div class="form-header">Event Info</div>
@@ -87,7 +94,7 @@
         <input type="text" name="street_address" value="Street Address">
       </p>
       <p class="form-entry">
-        <span class="label" id="cheating-width">Maximum number of players:</span>
+        <span class="label w3-opacity-min" id="cheating-width">Maximum number of players:</span>
         <input type="text" name="city" value="City">
       </p>
       <p class="form-entry">
@@ -96,16 +103,16 @@
       </p>
 
     </div>
-    <input type="text" name="comment" value="Additional Comments Here" class="largebox">
-    
+    <input type="text" name="comment" value="Additional Comments Here" class="largebox w3">
+
     <input type="submit">
-    
+
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
     </div>
   </div>
   </form>
-  <img class=image_for_game src="images/p5.jpg"> 
+  <img class=image_for_game src="images/chess.jpg">
 
 </div>
 <script>
@@ -118,15 +125,6 @@ function onClick(element) {
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {

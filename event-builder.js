@@ -1,7 +1,7 @@
 // CS 330 - Homework 3 starter code
 
-// This is the JSON (JavaScript Object Notation) object that stores all of our 
-// album information. 
+// This is the JSON (JavaScript Object Notation) object that stores all of our
+// album information.
 var events = [
   {
     title: "Settlers of Catan",
@@ -150,12 +150,14 @@ function buildeventlist() {
       continue;
     }
 
-   
+
 
     var eventDiv = document.createElement('div');
     let child = '';
     eventDiv.classList.add('event-wrapper');
+    eventDiv.classList.add('w3-theme-l3');
     child += `
+
     <div class="game-div">
     <p class="event-title">${event.title}</p>
     <p class="event-address">${event.genre}</p>
@@ -163,19 +165,20 @@ function buildeventlist() {
     <p class="event-date">${event.playstyle}</p>
     <p class="event-time">${event.playtime} min</p>
     </div>
+
     <div class="game-div">
     <p class="event-title">${event.date}</p>
     <p class="event-time">${event.time}</p>
     <p class="event-address">${event.street_address}</p>
     <p class="event-city"> ${event.city}</p>
     <p class="event-date">${event.state}</p>
-    
     </div>
+
     <form action="./index.html">
     <button>Join</button>
     </form>
     `;
-  
+
     eventDiv.innerHTML = child;
     if (eventList != null) {
       eventList.appendChild(eventDiv);

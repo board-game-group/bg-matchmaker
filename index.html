@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+<body class = "w3-theme-l4">
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top w3-theme">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
@@ -23,10 +24,13 @@
   </div>
 </div>
 
+<div class="site-name">
+    <p>Board Game Event Finder</p>
+</div>
 
 <div class="container">
-    <a href="page4.html" class="finder w3-button">FIND EVENT</a>
-    <a href="page2.html" class="finder w3-button">CREATE EVENT</a>
+    <a href="page4.html" class="finder w3-button w3-theme-l3">FIND EVENT</a>
+    <a href="page2.html" class="finder w3-button w3-theme-l3">CREATE EVENT</a>
 </div>
 
 <script>
@@ -38,16 +42,6 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
