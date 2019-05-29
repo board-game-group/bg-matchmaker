@@ -338,7 +338,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 .event-wrapper{
-    width: 800px;
+    width: 138%;
     height: 105px;
     border: #000 2px solid;
     display: inline-block;
@@ -349,7 +349,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 #event-list{
     display: inline-block;
     width: 900px;
-    padding-left: 175px;
+    padding-left: 29%;
 }
 
 .wrapper1{
@@ -531,4 +531,16 @@ input[type="submit"] {
 #join {
   position: relative;
   left: 50px;
+}
+
+#main-search {
+    position: relative;
+    left: 40%;
+    width: 20%;
+}
+
+#start-search {
+    position: relative;
+    left: 40%;
+    top: 10px;
 }

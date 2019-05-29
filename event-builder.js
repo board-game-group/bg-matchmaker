@@ -169,12 +169,16 @@ function buildeventlist() {
   }
 
   // Get the values of the selectors
-  var category_selector = document.getElementById("category-selector");
-  var tryhard_selector = document.getElementById("tryhard-selector");
-  var player_selector = document.getElementById("player-selector");
-  var category = category_selector[category_selector.selectedIndex].text;
-  var tryhard = tryhard_selector[tryhard_selector.selectedIndex].text;
-  var player = player_selector[player_selector.selectedIndex].text;
+  let category_selector = document.getElementById("category-selector");
+  let tryhard_selector = document.getElementById("tryhard-selector");
+  let player_selector = document.getElementById("player-selector");
+  let search_selector = document.getElementById("main-search")
+  let category = category_selector[category_selector.selectedIndex].text;
+  let tryhard = tryhard_selector[tryhard_selector.selectedIndex].text;
+  let player = player_selector[player_selector.selectedIndex].text; 
+  let search_term = search_selector.value;
+  
+  let search_array = search_term.toLowerCase().split(" ");
 
   for (let event of events) {
     // if the category doesn't match continue;
@@ -209,8 +213,42 @@ function buildeventlist() {
     if(tryhard !== "Select" && tryhard.toLowerCase() !== event.playstyle.toLowerCase()) {
       continue;
     }
-
-
+    // Also track search term
+    let tracker = true;
+    
+    for(let term of search_array) {
+        let inner_tracker = false;
+        if(event.title.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        if(event.complexity.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        if(event.date.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        if(event.time.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        if(event.street_address.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        if(event.city.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        if(event.state.toLowerCase().includes(term)) {
+            inner_tracker = true;
+        }
+        tracker = tracker && inner_tracker;
+    }
+    
+    if(search_term.length == 0) {
+        tracker = true;
+    }
+    
+    if(!tracker) {
+        continue;
+    }
 
     var eventDiv = document.createElement('div');
     let child = '';
