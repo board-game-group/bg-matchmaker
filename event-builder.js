@@ -194,7 +194,6 @@ function handleSignIn() {
         return 0;
     }
     let popup = document.getElementById("popup-in");
-    button.innerHTML = "Lasagna"
     popup.style.display = "block";
     return 0;
 }
