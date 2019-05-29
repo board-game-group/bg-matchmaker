@@ -92,7 +92,67 @@ var events = [
     state: "IL",
     comment: "",
     playstyle: "Competitive"
-  }
+  },
+  {
+    title: "Settlers of Catan",
+    genre: "Modern Strategy",
+    complexity: "2.34",
+    min_players: "3",
+    max_players: "4",
+    playtime: "90",
+    date: "06/12/19",
+    time: "5:00 PM",
+    street_address: "560 Foxrun Ct",
+    city: "Evanston",
+    state: "IL",
+    comment: "Bring Snacks",
+    playstyle: "Competitive"
+  },
+  {
+    title: "Settlers of Catan",
+    genre: "Modern Strategy",
+    complexity: "2.34",
+    min_players: "3",
+    max_players: "4",
+    playtime: "90",
+    date: "06/15/19",
+    time: "8:30 PM",
+    street_address: "2100 Foster Street",
+    city: "Evanston",
+    state: "IL",
+    comment: "",
+    playstyle: "Competitive"
+  },
+  {
+    title: "Settlers of Catan",
+    genre: "Modern Strategy",
+    complexity: "2.34",
+    min_players: "3",
+    max_players: "4",
+    playtime: "90",
+    date: "06/10/19",
+    time: "1:00 PM",
+    street_address: "560 Blue River Place",
+    city: "Evanston",
+    state: "IL",
+    comment: "Bring Snacks",
+    playstyle: "Casual"
+  },
+  {
+    title: "BlackJack",
+    genre: "Cards",
+    complexity: "1.51",
+    min_players: "2",
+    max_players: "10",
+    playtime: "30",
+    date: "06/13/19",
+    time: "4:00 PM",
+    street_address: "800 Maple Avenue",
+    city: "Evanston",
+    state: "IL",
+    comment: "",
+    playstyle: "Competitive"
+  },
 ];
 
 // document.getElementsByTagName('select')[0].onchange=function(){
@@ -166,7 +226,7 @@ function buildeventlist() {
 
     <div class="game-div">
     <p class="event-title">Event Time: ${event.date}, ${event.time} </p>
-    <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state} <button class="w3-right" id="join">Join</button></p>
+    <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state}</p>
     <p class="event-time">Playtime: ${event.playtime} minutes</p>
     </div>
 
