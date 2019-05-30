@@ -407,6 +407,13 @@ input {
     border: 1px solid gainsboro;
 }
 
+form select {
+    display: table-cell;
+    width: 150px;
+    margin-left: 20px;
+    border: 1px solid gainsboro;
+}
+
 input[type="radio"] {
     margin-left: 0px;
     margin-right: -200px;
@@ -489,6 +496,7 @@ input[type="submit"] {
     left: 85%;
     width: 12.5%;
     height: 20%;
+    z-index: 9999999999;
 }
 
 #popup-out {
@@ -503,14 +511,12 @@ input[type="submit"] {
     margin-top: 10px;
     margin-bottom: 10px;
     left: 10px;
-    z-index: -1;
 }
 
 #password {
     position: relative;
     margin-bottom: 10px;
     left: 10px;
-    z-index: -1;
 }
 
 .wonky-align #username {
