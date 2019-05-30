@@ -175,9 +175,9 @@ function buildeventlist() {
   let search_selector = document.getElementById("main-search")
   let category = category_selector[category_selector.selectedIndex].text;
   let tryhard = tryhard_selector[tryhard_selector.selectedIndex].text;
-  let player = player_selector[player_selector.selectedIndex].text; 
+  let player = player_selector[player_selector.selectedIndex].text;
   let search_term = search_selector.value;
-  
+
   let search_array = search_term.toLowerCase().split(" ");
 
   for (let event of events) {
@@ -215,7 +215,7 @@ function buildeventlist() {
     }
     // Also track search term
     let tracker = true;
-    
+
     for(let term of search_array) {
         let inner_tracker = false;
         if(event.title.toLowerCase().includes(term)) {
@@ -241,11 +241,11 @@ function buildeventlist() {
         }
         tracker = tracker && inner_tracker;
     }
-    
+
     if(search_term.length == 0) {
         tracker = true;
     }
-    
+
     if(!tracker) {
         continue;
     }
@@ -266,8 +266,13 @@ function buildeventlist() {
     <p class="event-title">Event Time: ${event.date}, ${event.time} </p>
     <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state}</p>
     <p class="event-time">Playtime: ${event.playtime} minutes</p>
+
+    <form class="w3-right">
+      <button formaction="page7.html">Join!</button>
+    </form>
+
     </div>
-    <button class="joiner w3-button">Join</button>
+
     `;
 
     eventDiv.innerHTML = child;
@@ -290,7 +295,7 @@ $('#content').html(output);
      return s.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")
    };
  }
- 
+
  jQuery(function(){
   var $rows = $('.values');
   $('#seeker').keyup(function () {
@@ -346,3 +351,14 @@ function startUp() {
     return 0;
 }
 
+function logins(){
+  if(sessionStorage.getItem("username") == "catanlover"){
+    document.getElementById("login").innerHTML = '<a href="page6_1.html">View your events here</a>';
+    return 0;
+  }
+  if(sessionStorage.getItem("username") == "catanhater"){
+    document.getElementById("login").innerHTML = '<a href="page6_2.html">View your events here</a>';
+    return 0;
+  }
+  return 0;
+}
