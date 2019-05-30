@@ -54,16 +54,27 @@ startUp();
     </p>
     <p class="form-entry">
         <span class="label">Genre:</span>
-        <input type="text" name="genre">
+        <select id="category-selector">
+            <option>Select</option>
+            <option>Abstract Strategy</option>
+            <option>Modern Strategy</option>
+            <option>Dice</option>
+            <option>Cards</option>
+            <option>Cooperative</option>
+            <option>Puzzle</option>
+            <option>Party</option>
+            <option>RPG</option>
+            <option>Secret Identity</option>
+        </select>
     </p>
     <p class="form-entry">
         <span class="label">Runtime (min):</span>
         <input type="number" name="runtime" min="0">
-    </p>
+    </p><!--
     <p class="form-entry">
         <span class="label">Complexity (1-10):</span>
         <input type="number" name="complexity" min="1" max="10">
-    </p><!--
+    </p>
     <p class="form-entry">
         <span class="label">Rating (1-10):</span>
         <input type="number" name="rating" min="1" max="10">
@@ -93,8 +104,8 @@ startUp();
         <input type="date">
       </p>
       <p class="form-entry">
-        <span class="label" placeholder="12:00 AM">Time:</span>
-        <input type="time">
+        <span class="label">Time:</span>
+        <input type="time" value="12:00">
       </p>
       <p class="form-entry">
         <span class="label">Location:</span>
