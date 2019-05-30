@@ -12,7 +12,7 @@ var events = [
     playtime: "90",
     date: "06/12/19",
     time: "5:00 PM",
-    street_address: "560 Foxrun Ct",
+    street_address: "570 Ambrose Ct",
     city: "Evanston",
     state: "IL",
     comment: "Bring Snacks",
@@ -275,33 +275,7 @@ function buildeventlist() {
       eventList.appendChild(eventDiv);
     }
   }
-  //trying something here
-output = "";
-$.each(events, function(key, val){
-	output += "<div class='game-div'>";
-  output += "</div>";
-});
-
-$('#content').html(output);
-
-/* SEEKER FUNCTION */
- if (!RegExp.escape) {
-   RegExp.escape = function (s) {
-     return s.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")
-   };
- }
  
- jQuery(function(){
-  var $rows = $('.values');
-  $('#seeker').keyup(function () {
-    var regex =  new RegExp(RegExp.escape($.trim(this.value).replace(/\s+/g, ' ')), 'i')
-    $rows.hide().filter(function () {
-      var text = $(this).children(".value-name").text().replace(/\s+/g, ' ');
-      return regex.test(text)
-    }).show();
-  });
-});
-}
 
 function handleSignIn() {
     let button = document.getElementById("sign-in");
