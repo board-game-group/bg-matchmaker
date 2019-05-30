@@ -350,3 +350,15 @@ function startUp() {
     button.innerHTML = sessionStorage.getItem("username");
     return 0;
 }
+
+function logins(){
+  if(sessionStorage.getItem("username") == "catanlover"){
+    document.getElementById("login").innerHTML = '<a href="page6_1.html">View your events here</a>';
+    return 0;
+  }
+  if(sessionStorage.getItem("username") == "catanhater"){
+    document.getElementById("login").innerHTML = '<a href="page6_2.html">View your events here</a>';
+    return 0;
+  }
+  return 0;
+}
