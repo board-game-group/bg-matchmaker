@@ -268,7 +268,7 @@ function buildeventlist() {
     <p class="event-time">Playtime: ${event.playtime} minutes</p>
 
     <form class="w3-right">
-      <button formaction="page7.html">Join!</button>
+      <button class="joiner w3-button" formaction="page7.html">Join!</button>
     </form>
 
     </div>
