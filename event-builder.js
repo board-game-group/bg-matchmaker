@@ -12,7 +12,7 @@ var events = [
     playtime: "90",
     date: "06/12/19",
     time: "5:00 PM",
-    street_address: "570 Ambrose Ct",
+    street_address: "560 Foxrun Ct",
     city: "Evanston",
     state: "IL",
     comment: "Bring Snacks",
