@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
-<script src="event_tracker.js"></script>
+<script src="event-builder.js"></script>
 <body class = "w3-theme-l4">
 
 <!-- Navbar (sit on top) -->
@@ -18,16 +18,20 @@
       <i class="fa fa-bars"></i>
     </a>
     <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in">
-      SIGN IN
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <a id="login"></a>
+    <button type="button" class="w3-bar-item w3-button w3-hide-small w3-right" id="sign-in" onclick="handleSignIn()">SIGN IN</button>
   </div>
 </div>
+
+<div class="wonky-align" id="popup-in">
+    <input type="text" placeholder = "username" id="username">
+    <br>
+    <input type="text" placeholder = "password" id="password">
+    <br>
+    <button type="button" id="final-login" onclick="handleStoreName()">SUBMIT</button>
+</div>
+
+<button type="button" id="popup-out" onclick="handleSignOut()">SIGN OUT</button>
 
 <!-- First Parallax Image with Logo Text -->
 <!-- <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
@@ -36,27 +40,42 @@
   </div>
 </div> -->
 
+<script>
+startUp();
+</script>
+
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center"><b>Event Details</b></h3>
-  <div class="form-header">Game Info</div>
+<div class="w3-content w3-container w3-padding-64" id="aboutEvent">
+  <h3 class="form-header large"><b>Event Details</b></h3>
   <form class=game_details_container>
+    <div class="form-header">Game Info</div>
     <p class="form-entry">
         <span class="label">Title:</span>
         <input type="text" name="title">
     </p>
     <p class="form-entry">
         <span class="label">Genre:</span>
-        <input type="text" name="genre">
+        <select id="category-selector">
+            <option>Select</option>
+            <option>Abstract Strategy</option>
+            <option>Modern Strategy</option>
+            <option>Dice</option>
+            <option>Cards</option>
+            <option>Cooperative</option>
+            <option>Puzzle</option>
+            <option>Party</option>
+            <option>RPG</option>
+            <option>Secret Identity</option>
+        </select>
     </p>
     <p class="form-entry">
         <span class="label">Runtime (min):</span>
         <input type="number" name="runtime" min="0">
-    </p>
+    </p><!--
     <p class="form-entry">
         <span class="label">Complexity (1-10):</span>
         <input type="number" name="complexity" min="1" max="10">
-    </p><!--
+    </p>
     <p class="form-entry">
         <span class="label">Rating (1-10):</span>
         <input type="number" name="rating" min="1" max="10">
@@ -67,7 +86,7 @@
     </p>
     <p class="form-entry">
         <span class="label">Maximum number of players:</span>
-        <input type="number" name="min_players" min="2">
+        <input type="number" name="max_players" min="2">
     </p>
     <p class="form-entry">
         <input type="radio" name="playstyle" value="casual">
@@ -87,34 +106,34 @@
       </p>
       <p class="form-entry">
         <span class="label">Time:</span>
-        <input type="time">
+        <input type="time" value="12:00">
       </p>
       <p class="form-entry">
         <span class="label">Location:</span>
-        <input type="text" name="street_address" value="Street Address">
+        <input type="text" name="street_address" placeholder="Street Address">
       </p>
       <p class="form-entry">
         <span class="label w3-opacity-min" id="cheating-width">Maximum number of players:</span>
-        <input type="text" name="city" value="City">
+        <input type="text" name="city" placeholder="City">
       </p>
       <p class="form-entry">
         <span class="label"></span>
-        <input type="text" name="state" value="State">
+        <input type="text" name="state" placeholder="State">
       </p>
-
+      <br>
+      <textarea name="comment" placeholder="Additional Comments" class="largebox w3"></textarea>
     </div>
-    <input type="text" name="comment" value="Additional Comments Here" class="largebox w3">
 
-    <input type="submit">
+    <input formaction="page7.html" type="submit">
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
     </div>
   </div>
   </form>
-  <img class=image_for_game src="images/chess.jpg">
 
 </div>
+
 <script>
 // Modal Image Gallery
 function onClick(element) {

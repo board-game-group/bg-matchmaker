@@ -14,7 +14,7 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  
+
 <div class="search-bar">
   <input type="text" id="seeker">
 </div>
@@ -45,55 +45,11 @@
 
 <button type="submit" id="popup-out" onclick="handleSignOut()">SIGN OUT</button>
 
+<div class="w3-content w3-container w3-padding-64 w3-center" >
+    <h3 class= id ="calendar">Welcome, catanlover!</h3>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=bGU2ZnRxNjd2Y3Q5aDVhdm5lOXVmam1tN3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F4511E&amp;mode=AGENDA" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
 
-
-  <!-- Container (About Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">Filtered Results(<a href="page5.html"><i class="fa fa-calendar" style="color:black"></i></a>)</h3>
-
-    <input type="text" id="main-search" placeholder="search here">
-    <button type="button" onclick = "buildeventlist()" id="start-search">Search</button>
-
-    <div class="wrapper1">
-      <div class="filter w3-theme-l3" >
-        <header>Filters</header>
-        <div class="selects">
-          <label>Genre</label>
-          <select onchange="buildeventlist()" id="category-selector" class="w3-theme-l4">
-            <option>Select</option>
-            <option>Abstract Strategy</option>
-            <option>Modern Strategy</option>
-            <option>Dice</option>
-            <option>Cards</option>
-            <option>Cooperative</option>
-            <option>Puzzle</option>
-            <option>Party</option>
-            <option>RPG</option>
-            <option>Secret Identity</option>
-          </select>
-          <label># of Players</label>
-          <select onchange="buildeventlist()" id="player-selector" class="w3-theme-l4">
-            <option>Select</option>
-            <option>1-4</option>
-            <option>5-10</option>
-            <option>10+</option>
-          </select>
-          <label>Competiveness</label>
-          <select onchange="buildeventlist()" id="tryhard-selector" class="w3-theme-l4">
-            <option>Select</option>
-            <option>Casual</option>
-            <option>Competitive</option>
-          </select>
-        </div>
-      </div>
-      <ul id=event-list></ul>
-
-      <script>
-        buildeventlist();
-      </script>
-    </div>
-  </div>
-  </div>
 
   <script>
     // Modal Image Gallery

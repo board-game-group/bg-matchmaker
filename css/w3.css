@@ -25,7 +25,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 ::-webkit-input-placeholder{color:inherit;opacity:0.54}
 ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
 /* End extract */
-html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5;}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.w3-serif{font-family:serif}
 h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
@@ -233,7 +233,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
 .finder {
-    margin-left: 250px;
+    margin-left: 20%;
     display: inline;
     padding: 100px;
     border: 2px solid black;
@@ -242,8 +242,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     left: -30px;
 }
 .container {
-    margin-top: 400px;
-    margin-bottom: 400px;
+    position: relative;
+    top: 315px;
 }
 
 .game_details_container p{
@@ -312,7 +312,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     display: inline-block;
     margin: 1px;
     position: fixed;
-    top: 121px;
+    top: 208px;
 }
 .filter header{
     text-align: center;
@@ -338,18 +338,18 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 .event-wrapper{
-    width: 750px;
-    height: 155px;
+    width: 138%;
+    height: 105px;
     border: #000 2px solid;
     display: inline-block;
     margin: 20px;
-    margin-bottom: 15px;
+
 }
 
 #event-list{
     display: inline-block;
     width: 900px;
-    padding-left: 175px;
+    padding-left: 25%;
 }
 
 .wrapper1{
@@ -360,17 +360,24 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     width: 40%;
     display: inline-block;
     position: relative;
-    left: 30px;
-    margin-top: 5px
+    left: 20px;
+    top: -20px;
 }
 
 .event-wrapper form{
     position: relative;
     display: inline-block;
+    top:-75px;
 }
 
-#about {
-    margin-bottom: -70px;
+#aboutEvent {
+    position: relative;
+    left: 0%;
+    background-color: white;
+    width: 55%;
+    border: 2px solid black;
+    margin-top: 50px;
+    margin-bottom: 5px;
 }
 
 input[type="submit"]{
@@ -381,6 +388,8 @@ input[type="submit"]{
 
 form {
     display: table;
+    position: relative;
+    left: 20%;
 }
 
 p.form-entry {
@@ -395,19 +404,26 @@ input {
     display: table-cell;
     width: 150px;
     margin-left: 20px;
+    border: 1px solid gainsboro;
+}
+
+form select {
+    display: table-cell;
+    width: 150px;
+    margin-left: 20px;
+    border: 1px solid gainsboro;
 }
 
 input[type="radio"] {
     margin-left: 0px;
     margin-right: -200px;
     position: relative;
-    right: 50px;
     display: block;
 }
 
 .radio-label {
     position: relative;
-    left: -150px;
+    left: -120px;
 }
 
 input[type="date"] {
@@ -424,11 +440,22 @@ input[type="time"] {
 
 textarea {
   resize: none;
+  position: relative;
+  left: 211px;
+  width: 150px;
+  border: 1px solid gainsboro;
+  color: grey;
 }
 
 .form-header {
   font-weight: bolder;
   font-size: 18px;
+}
+
+.form-header.large {
+  font-size: 24px;
+  position: relative;
+  left: 20%;
 }
 
 #cheating-width {
@@ -455,38 +482,87 @@ input[type="submit"] {
     font-weight: bolder;
     font-size: 30px;
     position: relative;
-    left: 480px;
-    top: 50px;
+    left: 37%;
+    top: 75px;
+    width: 30%;
 }
 
-.event-city{
-    display: inline-block;
-    margin-top:0px; 
-}
-.event-state{
-    display: inline-block;
-    width: 70%;
-    margin-top:0px;
-}
-.event-address{
-    margin-bottom:1px; 
-}
-.game-div button{
-    width: 60px;
-    height: 30px;
-}
-.event-title{
-    font-weight: bold;
-}
-.game-div p{
-    margin: 2px;
+#popup-in {
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    position: fixed;
+    top: 10%;
+    left: 85%;
+    width: 12.5%;
+    height: 20%;
+    z-index: 9999999999;
 }
 
-/* trying something here */  
-.search-bar input{
-    width: 40%;
-    height: 20px;
+#popup-out {
+    display: none;
+    position: fixed;
+    top: 7%;
+    left: 93%;
+}
+
+#username {
     position: relative;
-    top:50px;
-    left: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: 10px;
+}
+
+#password {
+    position: relative;
+    margin-bottom: 10px;
+    left: 10px;
+}
+
+.wonky-align #username {
+    left: -7px;
+}
+
+.wonky-align #password {
+    left: -7px;
+}
+
+#final-login {
+    position: relative;
+    margin-bottom: 10px;
+    left: 50px;
+    z-index: -1;
+}
+
+#join {
+  position: relative;
+  left: 50px;
+}
+
+#main-search {
+    position: relative;
+    left: 40%;
+    width: 20%;
+}
+
+#start-search {
+    position: relative;
+    left: 40%;
+    top: 10px;
+}
+
+.joiner {
+    position: relative;
+    background-color: white;
+    top: -47px;
+    left: 77px;
+    width: 115px;
+    height: 103px;
+    border: 1px solid black;
+    border-left: 2px solid black;
+}
+
+#about {
+    position: relative;
+    top: -150px;
 }
