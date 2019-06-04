@@ -330,6 +330,8 @@ function handleStoreName() {
     sessionStorage.setItem("username", username.value);
     button.innerHTML = sessionStorage.getItem("username");
 
+    logins();
+
     return 0;
 }
 
@@ -337,6 +339,9 @@ function handleSignOut() {
     sessionStorage.removeItem("username");
     document.getElementById("sign-in").innerHTML = "SIGN IN";
     document.getElementById("popup-out").style.display = "none";
+    
+    logins();
+    
     return 0;
 }
 
@@ -348,17 +353,24 @@ function startUp() {
     }
     let button = document.getElementById("sign-in");
     button.innerHTML = sessionStorage.getItem("username");
+    
+    logins();
+    
     return 0;
 }
 
 function logins(){
+  var calendar = document.getElementById("login");
   if(sessionStorage.getItem("username") == "catanlover"){
-    document.getElementById("login").innerHTML = '<a href="page6_1.html">View your events here</a>';
+    calendar.innerHTML = '<a class="w3-bar-item w3-button" href="page6_1.html">CALENDAR</a>';
     return 0;
   }
-  if(sessionStorage.getItem("username") == "catanhater"){
-    document.getElementById("login").innerHTML = '<a href="page6_2.html">View your events here</a>';
+  else if(sessionStorage.getItem("username") == "catanhater"){
+    calendar.innerHTML = '<a class="w3-bar-item w3-button" href="page6_2.html">CALENDAR</a>';
     return 0;
+  }
+  else {
+    calendar.innerHTML = '<a class="w3-bar-item w3-button" href="page6.html">CALENDAR</a>';
   }
   return 0;
 }
