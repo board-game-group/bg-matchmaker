@@ -374,3 +374,8 @@ function logins(){
   }
   return 0;
 }
+
+function backpage(currentPage){
+  sessionStorage.setItem('lastPage', currentPage);
+  return 0;
+}
