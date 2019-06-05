@@ -510,6 +510,7 @@ input[type="submit"] {
     position: fixed;
     top: 7%;
     left: 93%;
+    z-index: 5;
 }
 
 #username {
