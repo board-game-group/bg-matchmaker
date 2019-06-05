@@ -375,13 +375,13 @@ function logins(){
   return 0;
 }
 
-/* function backpagestore(currentPage){
+function backpagestore(currentPage){
   sessionStorage.setItem('lastPage', currentPage);
   return 0;
 }
 
 function backpagereturn() {
-  document.getElementById("backbutton").innerHTML = '<a href=sessionStorage.getItem("currentPage")>Back</a>';
+  document.getElementById("backbutton").innerHTML = sessionStorage.getItem("lastPage");
   return 0;
 }
- */
+
