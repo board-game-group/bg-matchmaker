@@ -26,7 +26,7 @@
 <div class="wonky-align" id="popup-in">
     <input type="text" placeholder = "username" id="username">
     <br>
-    <input type="text" placeholder = "password" id="password">
+    <input type="password" placeholder = "password" id="password">
     <br>
     <button type="button" id="final-login" onclick="handleStoreName()">SUBMIT</button>
 </div>
@@ -90,11 +90,11 @@ startUp();
     </p>
     <p class="form-entry">
         <input type="radio" name="playstyle" value="casual">
-        <span class="label radio-label">Casual</span>
+        <span class="label radio-label">Casual:</span>
     </p>
     <p class="form-entry">
         <input type="radio" name="playstyle" value="competitive">
-        <span class="label radio-label">Competitive</span>
+        <span class="label radio-label">Competitive:</span>
     </p>
 
     <div class="w3-row">
@@ -110,15 +110,15 @@ startUp();
       </p>
       <p class="form-entry">
         <span class="label">Location:</span>
-        <input type="text" name="street_address" placeholder="Street Address">
+        <input type="text" class="location-data" name="street_address" placeholder="Street Address">
       </p>
       <p class="form-entry">
         <span class="label w3-opacity-min" id="cheating-width">Maximum number of players:</span>
-        <input type="text" name="city" placeholder="City">
+        <input type="text" class="location-data" name="city" placeholder="City">
       </p>
       <p class="form-entry">
         <span class="label"></span>
-        <input type="text" name="state" placeholder="State">
+        <input type="text" class="location-data" name="state" placeholder="State">
       </p>
       <br>
       <textarea name="comment" placeholder="Additional Comments" class="largebox w3"></textarea>
