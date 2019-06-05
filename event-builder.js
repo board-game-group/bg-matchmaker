@@ -349,9 +349,9 @@ function startUp() {
     if(sessionStorage.getItem("username") === null) {
         let button = document.getElementById("sign-in");
         button.value = "SIGN IN";
-        
+
         logins();
-        
+      
         return 0;
     }
     let button = document.getElementById("sign-in");
@@ -375,3 +375,14 @@ function logins(){
   }
   return 0;
 }
+
+function backpagestore(currentPage){
+  sessionStorage.setItem('lastPage', currentPage);
+  return 0;
+}
+
+function backpagereturn() {
+  document.getElementById("backbutton").innerHTML = `<a href= ${sessionStorage.getItem("lastPage")}>back</a>`;
+  return 0;
+}
+
