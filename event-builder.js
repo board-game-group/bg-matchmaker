@@ -10,9 +10,9 @@ var events = [
     min_players: "3",
     max_players: "4",
     playtime: "90",
-    date: "06/12/19",
+    date: "06/12/2019",
     time: "5:00 PM",
-    street_address: "560 Foxrun Ct",
+    street_address: "1560 Sheridan Rd",
     city: "Evanston",
     state: "IL",
     comment: "Bring Snacks",
@@ -25,7 +25,7 @@ var events = [
     min_players: "2",
     max_players: "4",
     playtime: "45",
-    date: "06/10/19",
+    date: "06/10/2019",
     time: "7:30 PM",
     street_address: "500 Pulaski Rd",
     city: "Chicago",
@@ -40,7 +40,7 @@ var events = [
     min_players: "2",
     max_players: "10",
     playtime: "30",
-    date: "06/15/19",
+    date: "06/15/2019",
     time: "8:00 PM",
     street_address: "2107 Lake St",
     city: "Evanston",
@@ -55,7 +55,7 @@ var events = [
     min_players: "2",
     max_players: "10",
     playtime: "60",
-    date: "06/12/19",
+    date: "06/12/2019",
     time: "12:00 PM",
     street_address: "1720 Melvina Ave",
     city: "Chicago",
@@ -70,7 +70,7 @@ var events = [
     min_players: "2",
     max_players: "4",
     playtime: "120",
-    date: "06/14/19",
+    date: "06/14/2019",
     time: "11:00 AM",
     street_address: "560 Lincoln St",
     city: "Evanston",
@@ -85,7 +85,7 @@ var events = [
     min_players: "3",
     max_players: "7",
     playtime: "20",
-    date: "06/11/19",
+    date: "06/11/2019",
     time: "2:20 PM",
     street_address: "8720 Long St",
     city: "Chicago",
@@ -100,7 +100,7 @@ var events = [
     min_players: "3",
     max_players: "4",
     playtime: "90",
-    date: "06/12/19",
+    date: "06/12/2019",
     time: "5:00 PM",
     street_address: "560 Foxrun Ct",
     city: "Evanston",
@@ -115,7 +115,7 @@ var events = [
     min_players: "3",
     max_players: "4",
     playtime: "90",
-    date: "06/15/19",
+    date: "06/15/2019",
     time: "8:30 PM",
     street_address: "2100 Foster Street",
     city: "Evanston",
@@ -130,7 +130,7 @@ var events = [
     min_players: "3",
     max_players: "4",
     playtime: "90",
-    date: "06/10/19",
+    date: "06/10/2019",
     time: "1:00 PM",
     street_address: "560 Blue River Place",
     city: "Evanston",
@@ -145,7 +145,7 @@ var events = [
     min_players: "2",
     max_players: "10",
     playtime: "30",
-    date: "06/13/19",
+    date: "06/13/2019",
     time: "4:00 PM",
     street_address: "800 Maple Avenue",
     city: "Evanston",
@@ -257,15 +257,15 @@ function buildeventlist() {
     child += `
 
     <div class="game-div">
-    <p class="event-title">${event.title} (${event.playstyle})</p>
+    <p class="event-title"><a id="event-title">${event.title}</a> (${event.playstyle})</p>
     <p class="event-title">Genre: ${event.genre}</p>
     <p class="event-title">Maximum Players: ${event.max_players}</p>
     </div>
 
     <div class="game-div">
-    <p class="event-title">Event Time: ${event.date}, ${event.time} </p>
-    <p class="event-address">Location: ${event.street_address}, ${event.city}, ${event.state}</p>
-    <p class="event-time">Playtime: ${event.playtime} minutes</p>
+    <p class="event-title">${formatDate(event.date)} &nbsp; &nbsp; ${event.time} </p>
+    <p class="event-address">${event.street_address}, ${event.city}, ${event.state}</p>
+    <p class="event-time">Runtime: ${event.playtime} minutes</p>
 
     <form class="w3-right">
       <button class="joiner w3-button" formaction="page7.html">Join!</button>
@@ -386,3 +386,27 @@ function backpagereturn() {
   return 0;
 }
 
+function formatDate(date_str) {
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    weeks = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+    split_date = date_str.split("/");
+    new_date = new Date(split_date[2], split_date[0] - 1, split_date[1]);
+    pretty_date = weeks[new_date.getDay()] + ', ' + months[new_date.getMonth()] + ' ' + new_date.getDate() + ", " + new_date.getFullYear();
+    
+    return pretty_date;
+}
+
+function clearSearch() {
+    tryhard = document.getElementById("tryhard-selector");
+    category = document.getElementById("category-selector");
+    player = document.getElementById("player-selector");
+    search = document.getElementById("main-search");
+    
+    tryhard.selectedIndex = 0;
+    category.selectedIndex = 0;
+    player.selectedIndex = 0;
+    search.value = "";
+    
+    buildeventlist();
+}
