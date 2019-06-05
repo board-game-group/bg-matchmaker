@@ -404,6 +404,7 @@ input {
     display: table-cell;
     width: 150px;
     margin-left: 20px;
+    margin-bottom: 10px;
     border: 1px solid gainsboro;
 }
 
@@ -411,19 +412,20 @@ form select {
     display: table-cell;
     width: 150px;
     margin-left: 20px;
+    margin-bottom: 10px;
     border: 1px solid gainsboro;
 }
 
 input[type="radio"] {
-    margin-left: 0px;
-    margin-right: -200px;
+    left: 190px;
     position: relative;
     display: block;
 }
 
 .radio-label {
     position: relative;
-    left: -120px;
+    right: 190px;
+    bottom: 10px;
 }
 
 input[type="date"] {
@@ -431,6 +433,10 @@ input[type="date"] {
 }
 
 input[type="text"] {
+    color: grey;
+}
+
+input[type="password"] {
     color: grey;
 }
 
@@ -504,6 +510,7 @@ input[type="submit"] {
     position: fixed;
     top: 7%;
     left: 93%;
+    z-index: 5;
 }
 
 #username {
@@ -565,4 +572,8 @@ input[type="submit"] {
 #about {
     position: relative;
     top: -150px;
+}
+
+input.location-data {
+    margin-bottom: 0px;
 }

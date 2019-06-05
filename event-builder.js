@@ -351,6 +351,7 @@ function startUp() {
         button.value = "SIGN IN";
 
         logins();
+      
         return 0;
     }
     let button = document.getElementById("sign-in");
@@ -365,11 +366,9 @@ function logins(){
   var calendar = document.getElementById("login");
   if(sessionStorage.getItem("username") == "catanlover"){
     calendar.innerHTML = '<a class="w3-bar-item w3-button" href="page6_1.html">CALENDAR</a>';
-    return 0;
   }
   else if(sessionStorage.getItem("username") == "catanhater"){
     calendar.innerHTML = '<a class="w3-bar-item w3-button" href="page6_2.html">CALENDAR</a>';
-    return 0;
   }
   else {
     calendar.innerHTML = '<a class="w3-bar-item w3-button" href="page6.html">CALENDAR</a>';
