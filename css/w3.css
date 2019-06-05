@@ -307,13 +307,25 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .filter{
     border: #000 2px solid;
-    height: 300px;
+    height: 350px;
     width: 175px;
     display: inline-block;
     margin: 1px;
     position: fixed;
     top: 208px;
 }
+
+.filter-button {
+    position: relative;
+    left: 5px;
+    top: 20px;
+    width: 150px;
+    height: 30px;
+    line-height: 0px;
+    border-radius: 5px;
+    border: 1px solid #AAAAAA;
+}
+
 .filter header{
     text-align: center;
     font: bold;
@@ -339,7 +351,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .event-wrapper{
     width: 138%;
-    height: 105px;
+    height: 125px;
     border: #000 2px solid;
     display: inline-block;
     margin: 20px;
@@ -356,12 +368,18 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     width: 1200px
 }
 
-.game-div{
+.game-div {
     width: 40%;
     display: inline-block;
     position: relative;
     left: 20px;
     top: -20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#event-title {
+    font-weight: bolder;
 }
 
 .event-wrapper form{
@@ -561,19 +579,28 @@ input[type="submit"] {
 .joiner {
     position: relative;
     background-color: white;
-    top: -47px;
+    top: -57px;
     left: 77px;
-    width: 115px;
-    height: 103px;
+    width: 135px;
+    height: 123px;
     border: 1px solid black;
     border-left: 2px solid black;
 }
 
 #about {
     position: relative;
-    top: -150px;
+    top: -174px;
 }
 
 input.location-data {
     margin-bottom: 0px;
+}
+
+iframe {
+    border: 1px solid grey;
+}
+
+#move-on-down {
+    position: relative;
+    top: 70px;
 }
