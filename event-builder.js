@@ -385,4 +385,3 @@ function backpagereturn() {
   document.getElementById("backbutton").innerHTML = `<a href= ${sessionStorage.getItem("lastPage")}>back</a>`;
   return 0;
 }
-
