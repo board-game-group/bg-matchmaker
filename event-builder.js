@@ -253,7 +253,7 @@ function buildeventlist() {
     var eventDiv = document.createElement('div');
     let child = '';
     eventDiv.classList.add('event-wrapper');
-    eventDiv.classList.add('w3-theme-l3');
+    eventDiv.classList.add('w3-theme-l4');
     child += `
 
     <div class="game-div">
@@ -268,7 +268,7 @@ function buildeventlist() {
     <p class="event-time">Runtime: ${event.playtime} minutes</p>
 
     <form class="w3-right">
-      <button class="joiner w3-button w3-theme-l2" formaction="page7.html">Join!</button>
+      <button class="joiner w3-button w3-theme-l3" formaction="page7.html">Join!</button>
     </form>
 
     </div>
