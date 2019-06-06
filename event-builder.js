@@ -268,7 +268,7 @@ function buildeventlist() {
     <p class="event-time">Runtime: ${event.playtime} minutes</p>
 
     <form class="w3-right">
-      <button class="joiner w3-button" formaction="page7.html">Join!</button>
+      <button class="joiner w3-button w3-theme-l2" formaction="page7.html">Join!</button>
     </form>
 
     </div>
@@ -339,9 +339,9 @@ function handleSignOut() {
     sessionStorage.removeItem("username");
     document.getElementById("sign-in").innerHTML = "SIGN IN";
     document.getElementById("popup-out").style.display = "none";
-    
+
     logins();
-    
+
     return 0;
 }
 
@@ -351,14 +351,14 @@ function startUp() {
         button.value = "SIGN IN";
 
         logins();
-      
+
         return 0;
     }
     let button = document.getElementById("sign-in");
     button.innerHTML = sessionStorage.getItem("username");
-    
+
     logins();
-    
+
     return 0;
 }
 
@@ -389,11 +389,11 @@ function backpagereturn() {
 function formatDate(date_str) {
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     weeks = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    
+
     split_date = date_str.split("/");
     new_date = new Date(split_date[2], split_date[0] - 1, split_date[1]);
     pretty_date = weeks[new_date.getDay()] + ', ' + months[new_date.getMonth()] + ' ' + new_date.getDate() + ", " + new_date.getFullYear();
-    
+
     return pretty_date;
 }
 
@@ -402,11 +402,11 @@ function clearSearch() {
     category = document.getElementById("category-selector");
     player = document.getElementById("player-selector");
     search = document.getElementById("main-search");
-    
+
     tryhard.selectedIndex = 0;
     category.selectedIndex = 0;
     player.selectedIndex = 0;
     search.value = "";
-    
+
     buildeventlist();
 }
